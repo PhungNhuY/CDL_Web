@@ -1,0 +1,208 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>App Landing Template </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <!-- <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img class="logo_img" src="assets/img/logo/logo_1024.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Preloader Start -->
+
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparrent ">
+            <div class="main-header header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-2">
+                            <div class="logo">
+                                <a href="index.html"><img class="logo_img" src="assets/img/logo/logo_1024.png" alt=""
+                                        width="50px" height="50px"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <!-- Main-menu -->
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index.html"> Home</a></li>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li class="active"><a href="tests.html">Tests</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+
+
+
+    <div class="main_content">
+        <div class="start_test_container" id="start_test_container">
+            <div class="introduction">
+                <p>The knowledge you have gained from studying the Commercial Driver License Manual on topics such as road signs, handling weather, special road conditions, railroad crossings, right-of-way rules, and driving techniques will be tested today to help you become a better driver and to prepare you for the real CDL written exam. Our 50 multiple-choice questions, which are written just like those you will find on the actual test and each contain a hint and explanation to help you understand the subject matter completely, are an ideal way to simulate taking the exam. Instead of making question flash cards, you can test yourself here again and again until you receive a perfect score. Good luck and drive safely!</p>
+            </div>
+            <div class="select-and-text">
+                <p style="line-height: 50px;">Choose your state: </p>
+                <select name="" id="state" class="state">
+                </select>
+            </div>
+            <button class="btn_start_test" id="btn_start_test">Start</button>
+        </div>
+
+        
+        <div class="question_container" id="question_container">
+            <div class="question">
+                <p class="display_inline fontWeigth">Question </p>
+                <p class="display_inline fontWeigth" id="number_of_question"></p>
+                <p class="display_inline">/50</p>
+                <p id="question"></p>
+            </div>
+            <div class="question_image">
+                <img src="" alt="" id="question_image">
+            </div>
+            <div class="answer" id="answer1">
+                <div>
+                    <div class="abcd" id="abcd_1">A</div>
+                </div>
+                <div class="answer_wrapper">
+                    <p class="display_inline answer_content" id="answer_content_1"></p>
+                </div>
+            </div>
+            <div class="answer" id="answer2">
+                <div>
+                    <div class="abcd" id="abcd_2">B</div>
+                </div>
+                <div class="answer_wrapper">
+                    <p class="display_inline answer_content" id="answer_content_2"></p>
+                </div>
+            </div>
+            <div class="answer" id="answer3">
+                <div>
+                    <div class="abcd" id="abcd_3">C</div>
+                </div>
+                <div class="answer_wrapper">
+                    <p class="display_inline answer_content" id="answer_content_3"></p>
+                </div>
+            </div>
+            <div class="answer" id="answer4">
+                <div>
+                    <div class="abcd" id="abcd_4">D</div>
+                </div>
+                <div class="answer_wrapper">
+                    <p class="display_inline answer_content" id="answer_content_4"></p>
+                </div>
+            </div>
+            <div class="explanation answer" id="explanation">
+                <div>
+                    <img src="./assets/img/vector.svg" alt="">
+                </div>
+                <div class="answer_wrapper">
+                    <p class="display_inline answer_content" id="explanation_content"></p>
+                </div>
+            </div>
+
+            <div class="move">
+                <button id="back" onclick="back()">Back</button>
+                <button id="next" onclick="next()">Next</button>
+            </div>
+        </div>
+
+
+        <!-- summary -->
+        <div class="summary" id="summary">
+            <div class="score" id="circle_score">
+                <p class="display_inline" id="score">10/50</p>
+            </div>
+            <div class="summary_text">
+                <p id="congra"></p>
+                <p id="congra_content"></p>
+            </div>
+            <p>more blabla................</p>
+            <div class="app-btn">
+                <a class="dowload_app" href="#" class="app-btn1"><img
+                        src="assets/img/shape/app_btn1.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS here -->
+    <script src="./assets/js/tests.js"></script>
+
+    <!-- All JS Custom Plugins Link Here here -->
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
