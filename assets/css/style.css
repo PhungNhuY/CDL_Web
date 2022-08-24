@@ -2220,41 +2220,41 @@ hr {
 
 .section-padd-top30 {
     padding-top: 170px;
-    padding-bottom: 200px
+    padding-bottom: 0px
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .section-padd-top30 {
         padding-top: 170px;
-        padding-bottom: 200px
+        padding-bottom: 0px
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .section-padd-top30 {
         padding-top: 170px;
-        padding-bottom: 200px
+        padding-bottom: 0px
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .section-padd-top30 {
         padding-top: 100px;
-        padding-bottom: 160px
+        padding-bottom: 0px
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .section-padd-top30 {
         padding-top: 50px;
-        padding-bottom: 90px
+        padding-bottom: 0px
     }
 }
 
 @media (max-width: 767px) {
     .section-padd-top30 {
         padding-top: 35px;
-        padding-bottom: 90px
+        padding-bottom: 0px
     }
 }
 
@@ -2380,41 +2380,41 @@ hr {
 
 .footer-padding {
     padding-top: 200px;
-    padding-bottom: 100px
+    padding-bottom: 10px
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .footer-padding {
-        padding-top: 200px;
-        padding-bottom: 100px
+        padding-top: 50px;
+        padding-bottom: 10px
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .footer-padding {
-        padding-top: 70px;
-        padding-bottom: 50px
+        padding-top: 50px;
+        padding-bottom: 10px
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .footer-padding {
-        padding-top: 70px;
-        padding-bottom: 50px
+        padding-top: 50px;
+        padding-bottom: 10px
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .footer-padding {
-        padding-top: 70px;
-        padding-bottom: 50px
+        padding-top: 50px;
+        padding-bottom: 10px
     }
 }
 
 @media (max-width: 767px) {
     .footer-padding {
-        padding-top: 70px;
-        padding-bottom: 50px
+        padding-top: 50px;
+        padding-bottom: 10px
     }
 }
 
@@ -5647,30 +5647,30 @@ z .slider-area .hero-cap h2 {
 }
 
 .services-area {
-    padding-top: 270px
+    padding-top: 100px
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .services-area {
-        padding-top: 200px
+        padding-top: 100px
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .services-area {
-        padding-top: 150px
+        padding-top: 100px
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .services-area {
-        padding-top: 150px
+        padding-top: 0px
     }
 }
 
 @media (max-width: 767px) {
     .services-area {
-        padding-top: 130px
+        padding-top: 100px
     }
 }
 
@@ -5796,7 +5796,7 @@ z .slider-area .hero-cap h2 {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 90px
+    margin-bottom: 0px
 }
 
 @media (max-width: 767px) {
