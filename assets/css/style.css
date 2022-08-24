@@ -5871,7 +5871,7 @@ z .slider-area .hero-cap h2 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 30px;
     display: inline-block
 }
 
@@ -6943,6 +6943,12 @@ z .slider-area .hero-cap h2 {
 .start_test_container{
     margin: 0 auto;
     width: 50vw;
+    margin-bottom: 15px;
+}
+
+.start_test_container h2{
+    text-align: center;
+    font-weight: 700;
 }
 
 .introduction p{
@@ -6967,6 +6973,7 @@ z .slider-area .hero-cap h2 {
     display: none;
     margin: 0px auto;
     width: 50vw;
+    margin-bottom: 70px;
 }
 
 .question{
@@ -6979,6 +6986,10 @@ z .slider-area .hero-cap h2 {
 
 .question p{
     color: #000;
+}
+
+.question #question{
+    padding-bottom: 10px;
 }
 
 .display_inline{
@@ -7002,8 +7013,8 @@ z .slider-area .hero-cap h2 {
 .answer{
     border: 1px solid black;
     border-radius: 10px;
-    margin: 5px;
-    padding: 5px 10px;
+    margin: 10px;
+    padding: 10px 10px;
     display: flex;
 }
 
@@ -7069,6 +7080,14 @@ z .slider-area .hero-cap h2 {
     background-color:#22a551;
     border-radius: 50%;
     margin-bottom: 20px;
+    position: relative;
+}
+
+.show_score{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .score p{
@@ -7091,6 +7110,7 @@ z .slider-area .hero-cap h2 {
 .select-and-text{
     display: flex;
     justify-content: space-between;
+    margin: 10px 0px;
 }
 
 .display_flex{
