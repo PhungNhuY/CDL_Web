@@ -5796,7 +5796,7 @@ z .slider-area .hero-cap h2 {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 767px) {
@@ -6439,7 +6439,7 @@ z .slider-area .hero-cap h2 {
 }
 
 .available-app-area .app-img img {
-    width: 100%
+    width: 120%
 }
 
 .available-app-area .app-shape .app-shape-top {
@@ -7124,6 +7124,16 @@ z .slider-area .hero-cap h2 {
 
 .how-can-we{
     margin-top: 40px;
+}
+
+.my-ul{
+    list-style-type:circle;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+.my-ul li{
+    list-style-type:circle;
 }
 
 /* Extra small devices (phones, 600px and down) */
