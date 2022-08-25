@@ -3779,7 +3779,8 @@ hr {
 .contact-title {
     font-size: 27px;
     font-weight: 600;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .form-contact label {
@@ -3856,7 +3857,8 @@ hr {
     background-color: #191d34;
     padding: 18px 60px;
     border-radius: 50px;
-    margin-top: 0
+    margin-top: 0;
+
 }
 
 .contact-section .btn_2:hover {
@@ -7134,6 +7136,10 @@ z .slider-area .hero-cap h2 {
 
 .my-ul li{
     list-style-type:circle;
+}
+
+.margin-center{
+    margin: 0px auto;
 }
 
 /* Extra small devices (phones, 600px and down) */
