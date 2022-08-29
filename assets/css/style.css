@@ -7142,6 +7142,10 @@ z .slider-area .hero-cap h2 {
     margin: 0px auto;
 }
 
+.shit-code{
+    padding-bottom: 27px !important;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .start_test_container{
@@ -7194,6 +7198,44 @@ z .slider-area .hero-cap h2 {
     
     .summary{
         width: 50vw;
+    }
+    .state{
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .start_test_container{
+        width: 40vw;
+    }
+    .question_container{
+        width: 40vw;
+    }
+    .move{
+        width: 40vw;
+    }
+    
+    .summary{
+        width: 40vw;
+    }
+    .state{
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .start_test_container{
+        width: 30vw;
+    }
+    .question_container{
+        width: 30vw;
+    }
+    .move{
+        width: 30vw;
+    }
+    
+    .summary{
+        width: 30vw;
     }
     .state{
         width: 60%;
