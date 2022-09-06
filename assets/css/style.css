@@ -6993,12 +6993,61 @@ z .slider-area .hero-cap h2 {
     background-color: #22A551;
 }
 
-.question_container{
+.main_test_area{
     display: none;
-    margin: 0px auto;
+}
+
+.question_container{
+    /* display: none; */
+    /* margin: 0px auto; */
     width: 50vw;
     /* margin-bottom: 70px; */
     padding-bottom: 70px;
+}
+
+.menu_progress{
+    height: fit-content;
+    margin-left: 10vw;
+    margin-right: 1vw;
+    width: 320px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+    /* display: none; */
+}
+
+#atCell{
+    
+}
+
+.thisCell{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #eeeeee;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 3px;
+    margin-left: 3px;
+    font-weight: 500;
+}
+
+.cellCorrect{
+    color: black;
+    background-color: #22a551;
+}
+
+.cellWrong{
+    background-color: #FF4E34;
+    color: white;
+}
+
+.atProgressInfo p{
+    color: #7c7c91;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .question{
@@ -7182,7 +7231,7 @@ z .slider-area .hero-cap h2 {
 }
 
 .app_name{
-    font-size: 20px; 
+    font-size: 25px; 
     font-weight: 500;
     color: #22a551;
     line-height: 30px;

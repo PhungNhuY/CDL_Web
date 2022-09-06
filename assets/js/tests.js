@@ -27,7 +27,7 @@ var data = [];
 state = 1;
 
 
-//load select state
+//load data to state select tag
 listOfState = [];
 //load state
 statePath = 'assets/json/states.json'
@@ -53,27 +53,20 @@ loadState(function(json) {
 });
 
 
-function startTest(){
-    
-    document.getElementById("start_test_container").style.display = "none";
-    document.getElementById("question_container").style.display = "block";
-    //get state
-    state = document.getElementById("state").value;
-    numberOfQuestion = 0;
-    data = [];
-    currentQuestion = 0;
-
-    // load xong -> gen ans
-    loadJSON(function(json) {
-        json.questions.forEach(element => {
-            if(element.state == state){
-                data.push(element);
-                numberOfQuestion++;
-            }
-        });
-        gen_ans(currentQuestion);
-    });
+//load json file from assets
+path = 'assets/json/questions.json'
+function loadJSON(callback) {   
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', path, true);
+    xobj.onreadystatechange = function () {
+      if (xobj.readyState == 4 && xobj.status == "200") {
+        callback(JSON.parse(xobj.responseText));
+      }
+    };
+    xobj.send(null);
 }
+
 
 
 //display the ans
@@ -113,7 +106,7 @@ function gen_ans(id){
 }
 
 
-//show ans after user clicked
+//show ans after clicked
 function choose(number){
     //wrong color
     document.getElementById("abcd_"+number).style.backgroundColor = '#FF4E34';
@@ -133,8 +126,16 @@ function choose(number){
     answer2.setAttribute('onclick', '');
     answer3.setAttribute('onclick', '');
     answer4.setAttribute('onclick', '');
-    
+
     data[currentQuestion].userChoose = number;
+
+    //handle Progress
+    let currentCell = document.getElementById(`cell_${currentQuestion+1}`);
+    if(number == data[currentQuestion].answerCorrect){
+        currentCell.setAttribute('class', 'thisCell cellCorrect');
+    }else{
+        currentCell.setAttribute('class', 'thisCell cellWrong');
+    }
 }
 
 
@@ -144,7 +145,7 @@ function next(){
     if(currentQuestion<numberOfQuestion){
         gen_ans(currentQuestion);
     }else{
-        document.getElementById("question_container").style.display = "none";
+        document.getElementById("main_test_area").style.display = "none";
         document.getElementById("summary").style.display = "block";
         score = 0;
         for(i=0;i<50;i++){
@@ -153,7 +154,7 @@ function next(){
             }
         }
         document.getElementById("score").innerText = score + '/' + numberOfQuestion;
-        if(score<(numberOfQuestion*80/100)){
+        if(score<(numberOfQuestion*80/100).toFixed()){
             document.getElementById('circle_score').style.backgroundColor = '#FF4E34'
             document.getElementById('congra').innerText = "Insufficinet to pass";
             document.getElementById('congra_content').innerText = "We're almost there\nGive a quick once-over to ensure you get it right the next time";
@@ -174,16 +175,35 @@ function back(){
 }
 
 
-//load json file from assets
-path = 'assets/json/questions.json'
-function loadJSON(callback) {   
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', path, true);
-    xobj.onreadystatechange = function () {
-      if (xobj.readyState == 4 && xobj.status == "200") {
-        callback(JSON.parse(xobj.responseText));
-      }
-    };
-    xobj.send(null);
+function startTest(){
+    //hide start_test_container
+    document.getElementById("start_test_container").style.display = "none";
+    document.getElementById("main_test_area").style.display = "flex";
+    //get state
+    state = document.getElementById("state").value;
+    numberOfQuestion = 0;
+    data = [];
+    currentQuestion = 0;
+    menuProgress = document.getElementById('atCell');
+
+    // load xong -> gen ans
+    loadJSON(function(json) {
+        let i = 0;
+        json.questions.forEach(element => {
+            if(element.state == state){
+                data.push(element);
+                numberOfQuestion++;
+                //gen progress
+                i++;
+                let cell = document.createElement("div");
+                cell.innerText = i;
+                cell.setAttribute('class', 'thisCell');
+                cell.setAttribute('id', `cell_${i}`);
+                menuProgress.appendChild(cell);
+            }
+        });
+        //calculate the number of mistakes allowed
+        document.getElementById('numberOfMistakes').innerText = (i/5).toFixed();
+        gen_ans(currentQuestion);
+    });
 }
