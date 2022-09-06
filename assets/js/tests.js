@@ -109,13 +109,13 @@ function gen_ans(id){
     }
 
     //show border in current question cell
-    for(let i=1;i<=numberOfQuestion;i++){
+    for(let i=0;i<numberOfQuestion;i++){
         document.getElementById(`cell_${i}`).style.border = "none";
     }
-    document.getElementById(`cell_${id+1}`).style.border = "2px solid blue";
+    document.getElementById(`cell_${id}`).style.border = "2px solid blue";
 
     //set onclick for cell
-    document.getElementById(`cell_${id+1}`).setAttribute('onclick', `gen_ans(${id})`);
+    document.getElementById(`cell_${id}`).setAttribute('onclick', `gen_ans(${id})`);
 
     //Show results if the question has been answered
     if(data[id].userChoose != null && data[id].userChoose != ''){
@@ -155,7 +155,7 @@ function choose(number, idQuestion){
     data[idQuestion].userChoose = number;
 
     //handle Progress
-    let currentCell = document.getElementById(`cell_${idQuestion+1}`);
+    let currentCell = document.getElementById(`cell_${idQuestion}`);
     if(number == data[idQuestion].answerCorrect){
         currentCell.setAttribute('class', 'thisCell cellCorrect');
     }else{
@@ -167,7 +167,7 @@ function choose(number, idQuestion){
 
     //set onclick for next cell
     if(idQuestion<numberOfQuestion-1){
-        document.getElementById(`cell_${idQuestion+2}`).setAttribute('onclick', `gen_ans(${idQuestion+1})`);
+        document.getElementById(`cell_${idQuestion+1}`).setAttribute('onclick', `gen_ans(${idQuestion+1})`);
     }
 }
 
@@ -231,7 +231,7 @@ function startTest(){
                 let cell = document.createElement("div");
                 cell.innerText = i;
                 cell.setAttribute('class', 'thisCell');
-                cell.setAttribute('id', `cell_${i}`);
+                cell.setAttribute('id', `cell_${i-1}`);
                 menuProgress.appendChild(cell);
             }
         });
