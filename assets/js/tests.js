@@ -71,6 +71,7 @@ function loadJSON(callback) {
 
 //display the ans
 function gen_ans(id){
+    currentQuestion = id;
     if(id==0){
         document.getElementById("back").style.display = "none";
         document.getElementsByClassName("move")[0].style.justifyContent = "flex-end";
@@ -163,6 +164,11 @@ function choose(number, idQuestion){
 
     //show next button
     document.getElementById("next").style.display = "block";
+
+    //set onclick for next cell
+    if(idQuestion<numberOfQuestion-1){
+        document.getElementById(`cell_${idQuestion+2}`).setAttribute('onclick', `gen_ans(${idQuestion+1})`);
+    }
 }
 
 
