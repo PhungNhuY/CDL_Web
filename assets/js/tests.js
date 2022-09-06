@@ -92,10 +92,10 @@ function gen_ans(id){
     answer_content_3.innerText = data[id].answer3;
     answer_content_4.innerText = data[id].answer4;
 
-    answer1.setAttribute('onclick', 'choose(1)');
-    answer2.setAttribute('onclick', 'choose(2)');
-    answer3.setAttribute('onclick', 'choose(3)');
-    answer4.setAttribute('onclick', 'choose(4)');
+    answer1.setAttribute('onclick', `choose(1, ${id})`);
+    answer2.setAttribute('onclick', `choose(2, ${id})`);
+    answer3.setAttribute('onclick', `choose(3, ${id})`);
+    answer4.setAttribute('onclick', `choose(4, ${id})`);
 
     explanation_content.innerText = data[id].explanation;
     explanation.style.display = 'none';
@@ -114,11 +114,11 @@ function gen_ans(id){
     document.getElementById(`cell_${id+1}`).style.border = "2px solid blue";
 
     //set onclick for cell
-    document.getElementById(`cell_${currentQuestion+1}`).setAttribute('onclick', `gen_ans(${currentQuestion})`);
+    document.getElementById(`cell_${id+1}`).setAttribute('onclick', `gen_ans(${id})`);
 
     //Show results if the question has been answered
     if(data[id].userChoose != null && data[id].userChoose != ''){
-        choose(data[id].userChoose);
+        choose(data[id].userChoose, id);
     }
 
     //hide next button if question has not been answered
@@ -131,14 +131,14 @@ function gen_ans(id){
 
 
 //show ans after clicked
-function choose(number){
+function choose(number, idQuestion){
     //wrong color
     document.getElementById("abcd_"+number).style.backgroundColor = '#FF4E34';
     document.getElementById("answer"+number).style.border = '1px solid #FF4E34';
     document.getElementById("answer"+number).style.backgroundColor = '#FFEBE8';
     document.getElementById("abcd_"+number).style.color = "white";
     //correct color
-    correctAns = data[currentQuestion].answerCorrect;
+    correctAns = data[idQuestion].answerCorrect;
     document.getElementById("abcd_"+correctAns).style.backgroundColor = '#34B493';
     document.getElementById("answer"+correctAns).style.border = '1px solid #34B493';
     document.getElementById("answer"+correctAns).style.backgroundColor = '#DBF1E4';
@@ -151,11 +151,11 @@ function choose(number){
     answer3.setAttribute('onclick', '');
     answer4.setAttribute('onclick', '');
 
-    data[currentQuestion].userChoose = number;
+    data[idQuestion].userChoose = number;
 
     //handle Progress
-    let currentCell = document.getElementById(`cell_${currentQuestion+1}`);
-    if(number == data[currentQuestion].answerCorrect){
+    let currentCell = document.getElementById(`cell_${idQuestion+1}`);
+    if(number == data[idQuestion].answerCorrect){
         currentCell.setAttribute('class', 'thisCell cellCorrect');
     }else{
         currentCell.setAttribute('class', 'thisCell cellWrong');
