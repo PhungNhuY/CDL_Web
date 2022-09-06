@@ -71,6 +71,13 @@ function loadJSON(callback) {
 
 //display the ans
 function gen_ans(id){
+    if(id==0){
+        document.getElementById("back").style.display = "none";
+        document.getElementsByClassName("move")[0].style.justifyContent = "flex-end";
+    }else{
+        document.getElementById("back").style.display = "block";
+        document.getElementsByClassName("move")[0].style.justifyContent = "space-between";
+    }
     number_of_question.innerText = id+1;
     question.innerText = data[id].question;
 
@@ -94,14 +101,31 @@ function gen_ans(id){
     explanation.style.display = 'none';
 
     for(i=1;i<=4;i++){
-        document.getElementById("abcd_"+i).style.backgroundColor = '#b9b9b9';
+        document.getElementById("abcd_"+i).style.backgroundColor = '#e5e5e5';
         document.getElementById("abcd_"+i).style.color = 'black';
         document.getElementById("answer"+i).style.border = '1px solid #b9b9b9';
         document.getElementById("answer"+i).style.backgroundColor = 'white';
     }
 
+    //show border in current question cell
+    for(let i=1;i<=numberOfQuestion;i++){
+        document.getElementById(`cell_${i}`).style.border = "none";
+    }
+    document.getElementById(`cell_${id+1}`).style.border = "2px solid blue";
+
+    //set onclick for cell
+    document.getElementById(`cell_${currentQuestion+1}`).setAttribute('onclick', `gen_ans(${currentQuestion})`);
+
+    //Show results if the question has been answered
     if(data[id].userChoose != null && data[id].userChoose != ''){
         choose(data[id].userChoose);
+    }
+
+    //hide next button if question has not been answered
+    if(data[id].userChoose == undefined){
+        document.getElementById("next").style.display = "none";
+    }else{
+
     }
 }
 
@@ -136,6 +160,9 @@ function choose(number){
     }else{
         currentCell.setAttribute('class', 'thisCell cellWrong');
     }
+
+    //show next button
+    document.getElementById("next").style.display = "block";
 }
 
 

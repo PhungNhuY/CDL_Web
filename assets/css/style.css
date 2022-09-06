@@ -6941,7 +6941,7 @@ z .slider-area .hero-cap h2 {
 
 /* ------------------------- */
 .main_content{
-    margin-top: 90px;
+    margin-top: 120px;
     position: relative;
 }
 
@@ -6951,7 +6951,7 @@ z .slider-area .hero-cap h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../img/hero/Practice_GK_4.jpg); 
+    /* background-image: url(../img/hero/Practice_GK_4.jpg);  */
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -7009,7 +7009,7 @@ z .slider-area .hero-cap h2 {
     height: fit-content;
     margin-left: 10vw;
     margin-right: 1vw;
-    width: 320px;
+    width: 330px;
     border-radius: 10px;
     padding: 20px;
     background-color: #fff;
@@ -7029,13 +7029,14 @@ z .slider-area .hero-cap h2 {
     background-color: #eeeeee;
     text-align: center;
     line-height: 30px;
-    margin-top: 3px;
-    margin-left: 3px;
+    margin-top: 5px;
+    margin-left: 5px;
     font-weight: 500;
+    color: rgb(91, 91, 91);
 }
 
 .cellCorrect{
-    color: black;
+    color: white;
     background-color: #22a551;
 }
 
@@ -7099,7 +7100,7 @@ z .slider-area .hero-cap h2 {
 .abcd{
     line-height: 25px;
     text-align: center;
-    background-color: #828bb2;
+    background-color: #e5e5e5;
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -7115,7 +7116,6 @@ z .slider-area .hero-cap h2 {
     /* display: none; */
     border: none;
     background-color: #F9E3C4;
-    margin-bottom: 70px;
 }
 
 .fontWeigth{
@@ -7126,8 +7126,8 @@ z .slider-area .hero-cap h2 {
     /* background-color: white; */
     height: 40px;
     width: 50vw;
-    position: fixed;
-    bottom: 3%;
+    /* position: fixed; */
+    /* bottom: 3%; */
     display: flex;
     justify-content: space-between;
 }
@@ -7262,6 +7262,12 @@ z .slider-area .hero-cap h2 {
     .app_name{
         display: none;
     }
+    .menu_progress{
+        display: none;
+    }
+    .question_container{
+        margin: 0px auto;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -7280,6 +7286,12 @@ z .slider-area .hero-cap h2 {
     }
     .state{
         width: 60%;
+    }
+    .menu_progress{
+        display: none;
+    }
+    .question_container{
+        margin: 0px auto;
     }
 }
 
@@ -7301,6 +7313,14 @@ z .slider-area .hero-cap h2 {
     .state{
         width: 60%;
     }
+    .menu_progress{
+        margin-left: 50px;
+        display: block;
+        width: 200px;
+    }
+    .question_container{
+        margin-left: 20px;
+    }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -7320,23 +7340,39 @@ z .slider-area .hero-cap h2 {
     .state{
         width: 60%;
     }
+    .menu_progress{
+        margin-left: 150px;
+        display: block;
+        width: 330px;
+    }
+    .question_container{
+        margin-left: 40px;
+    }
 }
 
 @media only screen and (min-width: 1500px) {
     .start_test_container{
-        width: 30vw;
+        width: 35vw;
     }
     .question_container{
-        width: 30vw;
+        width: 35vw;
     }
     .move{
-        width: 30vw;
+        width: 35vw;
     }
     
     .summary{
-        width: 30vw;
+        width: 35vw;
     }
     .state{
         width: 60%;
+    }
+    .menu_progress{
+        margin-left: 250px;
+        display: block;
+        width: 330px;
+    }
+    .question_container{
+        margin-left: 40px;
     }
 }
