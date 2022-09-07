@@ -6989,6 +6989,7 @@ z .slider-area .hero-cap h2 {
     border-radius: 20px;
     border: 0px;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .btn_start_test:hover{
@@ -7035,6 +7036,7 @@ z .slider-area .hero-cap h2 {
     margin-left: 5px;
     font-weight: 500;
     color: rgb(91, 91, 91);
+    cursor: pointer;
 }
 
 .cellCorrect{
@@ -7093,6 +7095,7 @@ z .slider-area .hero-cap h2 {
     margin: 10px;
     padding: 10px 10px;
     display: flex;
+    cursor: pointer;
 }
 
 .answer_content{
@@ -7140,6 +7143,7 @@ z .slider-area .hero-cap h2 {
     border: 0px;
     background-color: #22a551;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .summary{
@@ -7185,6 +7189,7 @@ z .slider-area .hero-cap h2 {
     padding-left: 20px;
     border: 0px;
     background-color: #eeeeee;
+    cursor: pointer;
 }
 
 .select-and-text{
@@ -7274,6 +7279,7 @@ z .slider-area .hero-cap h2 {
     background-color: #22a551;
     border-radius: 5px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .btnWrp{
