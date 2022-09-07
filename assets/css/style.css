@@ -7234,12 +7234,21 @@ z .slider-area .hero-cap h2 {
     font-size: 25px; 
     font-weight: 500;
     color: #22a551;
-    line-height: 30px;
+    /* line-height: 30px; */
     vertical-align: middle;
 }
 
 .text_our_blog{
     margin-top: 100px;
+}
+
+.text_align_center{
+    text-align: center;
+}
+
+.img_for_mobile{
+    display: none;
+    margin-top: 30px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -7260,7 +7269,8 @@ z .slider-area .hero-cap h2 {
         width: 40%;
     }
     .app_name{
-        display: none;
+        /* display: none; */
+        font-size: 15px; 
     }
     .menu_progress{
         display: none;
@@ -7287,6 +7297,10 @@ z .slider-area .hero-cap h2 {
     .state{
         width: 60%;
     }
+    .app_name{
+        /* display: none; */
+        font-size: 15px; 
+    }
     .menu_progress{
         display: none;
     }
@@ -7312,6 +7326,10 @@ z .slider-area .hero-cap h2 {
     }
     .state{
         width: 60%;
+    }
+    .app_name{
+        /* display: none; */
+        font-size: 25px; 
     }
     .menu_progress{
         margin-left: 50px;
@@ -7374,5 +7392,39 @@ z .slider-area .hero-cap h2 {
     }
     .question_container{
         margin-left: 40px;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .img_for_mobile{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .img_for_mobile{
+        display: block;
+        margin-top: 80px;
+    }
+    .img_for_mobile img{
+        width: 50vw;
+        margin: 0px auto;
+    }
+    .hero__caption{
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .img_for_mobile{
+        display: block;
+    }
+    .img_for_mobile img{
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .hero__caption{
+        text-align: center;
     }
 }

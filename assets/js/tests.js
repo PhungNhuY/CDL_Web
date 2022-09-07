@@ -25,11 +25,10 @@ numberOfQuestion = 0;
 currentQuestion = -1;
 var data = [];
 state = 1;
+listOfState = [];
 
 
 //load data to state select tag
-listOfState = [];
-//load state
 statePath = 'assets/json/states.json'
 function loadState(callback) {   
     var xobj = new XMLHttpRequest();
