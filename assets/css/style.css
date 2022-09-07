@@ -7421,8 +7421,7 @@ z .slider-area .hero-cap h2 {
         display: block;
     }
     .img_for_mobile img{
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0);
+        width: 100ww;
     }
     .hero__caption{
         text-align: center;
