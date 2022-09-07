@@ -2259,41 +2259,41 @@ hr {
 }
 
 .section-padd4 {
-    padding-top: 200px;
+    padding-top: 50px;
     padding-bottom: 110px
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .section-padd4 {
-        padding-top: 200px;
+        padding-top: 50px;
         padding-bottom: 110px
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .section-padd4 {
-        padding-top: 100px;
+        padding-top: 50px;
         padding-bottom: 30px
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .section-padd4 {
-        padding-top: 70px;
+        padding-top: 50px;
         padding-bottom: 15px
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .section-padd4 {
-        padding-top: 70px;
+        padding-top: 50px;
         padding-bottom: 15px
     }
 }
 
 @media (max-width: 767px) {
     .section-padd4 {
-        padding-top: 70px;
+        padding-top: 50px;
         padding-bottom: 15px
     }
 }
@@ -5446,7 +5446,7 @@ del {
 
 .slicknav_menu {
     background: transparent;
-    margin-top: 5px !important
+    margin-top: 5px !important;
 }
 
 .mobile_menu {
@@ -5457,26 +5457,26 @@ del {
 }
 
 .slider-height {
-    min-height: 1000px;
+    /* min-height: 1000px; */
     background-repeat: no-repeat;
     background-position: center center
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .slider-height {
-        min-height: 900px
+        /* min-height: 900px */
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .slider-height {
-        min-height: 600px
+        /* min-height: 600px */
     }
 }
 
 @media (max-width: 767px) {
     .slider-height {
-        min-height: 600px
+        /* min-height: 600px */
     }
 }
 
@@ -5485,7 +5485,7 @@ del {
 }
 
 .slider-padding {
-    padding-top: 130px
+    padding-top: 0px;
 }
 
 @media (max-width: 767px) {
@@ -5513,8 +5513,10 @@ del {
 }
 
 .slider-area {
-    margin-top: -1px;
-    background-color: #7dbcf0;
+    /* margin-top: -1px; */
+    padding-top: 120px;
+    background-color: #EBF3FA;
+    padding-bottom: 50px;
 }
 
 .slider-area .hero__caption {
@@ -5565,20 +5567,20 @@ del {
 }
 
 .slider-area .hero__caption p {
-    margin-bottom: 54px;
+    margin-bottom: 20px;
     padding-right: 155px
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .slider-area .hero__caption p {
-        margin-bottom: 54px;
+        margin-bottom: 20px;
         padding-right: 0px
     }
 }
 
 @media (max-width: 767px) {
     .slider-area .hero__caption p {
-        margin-bottom: 54px;
+        margin-bottom: 20px;
         padding-right: 0px
     }
 }
@@ -5921,8 +5923,8 @@ z .slider-area .hero-cap h2 {
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .applic-apps .single-cases-info {
-        margin-top: 72px;
-        left: 33%
+        margin-top: 10px;
+        left: 5%
     }
 }
 
@@ -7252,6 +7254,32 @@ z .slider-area .hero-cap h2 {
     margin-top: 30px;
 }
 
+.goto_learning{
+    /* background-color: #0078ff; */
+    padding-left: 10px;
+    width: 40vw;
+}
+
+.learn_and_download{
+    display: flex;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+
+.startTestBtn{
+    color: white;
+    width: 250px;
+    border: 0px;
+    height: 50px;
+    background-color: #22a551;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.btnWrp{
+    display: flex;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .start_test_container{
@@ -7278,6 +7306,13 @@ z .slider-area .hero-cap h2 {
     }
     .question_container{
         margin: 0px auto;
+    }
+    .btnWrp{
+        display: block;
+    }
+    .startTestBtn{
+        width: 80vw;
+        margin-bottom: 10px;
     }
 }
 
@@ -7340,6 +7375,9 @@ z .slider-area .hero-cap h2 {
     .question_container{
         margin-left: 20px;
     }
+    .goto_learning{
+        width: 30vw;
+    }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -7366,6 +7404,9 @@ z .slider-area .hero-cap h2 {
     }
     .question_container{
         margin-left: 40px;
+    }
+    .goto_learning{
+        width: 40vw;
     }
 }
 
@@ -7394,8 +7435,13 @@ z .slider-area .hero-cap h2 {
     .question_container{
         margin-left: 40px;
     }
+    .goto_learning{
+        width: 40vw;
+    }
 }
 
+
+/* -===-=-=-=-=-=-=-=-= */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .img_for_mobile{
@@ -7415,6 +7461,9 @@ z .slider-area .hero-cap h2 {
     .hero__caption{
         text-align: center;
     }
+    .goto_learning{
+        width: 50vw;
+    }
 }
 
 @media (max-width: 767px) {
@@ -7426,5 +7475,8 @@ z .slider-area .hero-cap h2 {
     }
     .hero__caption{
         text-align: center;
+    } 
+    .goto_learning{
+        width: 80vw;
     }
 }

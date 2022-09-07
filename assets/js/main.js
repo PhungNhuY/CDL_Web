@@ -207,13 +207,13 @@
         speed: 3000,
         smartSpeed:2000,
         dots: false,
-        margin: 15,
+        margin: 5,
         nav  : false,
         navText : ["<i class='fas fa-arrow-left'></i>","<i class='fas fa-arrow-right'></i>"],
         autoplayHoverPause: true,
         responsive : {
           0 : {
-            items: 1
+            items: 3
           },
           768 : {
             items: 2
