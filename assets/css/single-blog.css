@@ -1,0 +1,23 @@
+h3,.h3{
+    font-weight: 600;
+}
+.link_to{
+    color: green !important;
+    text-decoration: underline !important;
+}
+
+.image_blog{
+    width: 80vw; 
+    max-width: 600px;
+    margin: 20px;
+}
+
+.li_unset{
+    list-style-type: unset;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.dec_margin{
+    margin: 0px;
+}
