@@ -7248,6 +7248,7 @@ z .slider-area .hero-cap h2 {
 
 .img_for_mobile{
     display: none;
+    /* width: 100vw; */
     margin-top: 30px;
 }
 
@@ -7421,7 +7422,7 @@ z .slider-area .hero-cap h2 {
         display: block;
     }
     .img_for_mobile img{
-        width: 100ww;
+        width: 100vw;
     }
     .hero__caption{
         text-align: center;
