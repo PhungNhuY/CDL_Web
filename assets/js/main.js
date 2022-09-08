@@ -91,13 +91,13 @@
   $('.customar-active').slick({
     dots: true,
     infinite: true,
-    speed: 600,
-    arrows: false,
+    speed: 300,
+    arrows: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: '<button type="button" class="slick-prev"> <span class="flaticon-arrow"></span></button>',
     nextArrow: '<button type="button" class="slick-next"> <span class="flaticon-arrow"><span></button>',
-    autoplay:false,
+    autoplay:true,
     initialSlide: 3,
     centerMode: true,
     loop:true,
@@ -105,34 +105,34 @@
       {
         breakpoint: 1300,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: false,
+          dots: true,
         }
       }, 
            {
         breakpoint: 1050,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: false,
+          dots: true,
         }
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: false,
+          dots: true,
         }
       },
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1
         }
       },
