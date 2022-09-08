@@ -248,3 +248,5 @@ function startTest(){
         gen_ans(currentQuestion);
     });
 }
+
+// startTest();

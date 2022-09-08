@@ -7299,7 +7299,7 @@ z .slider-area .hero-cap h2 {
 .timerWrp{
     position: absolute;
     left: 0;
-    width: 25%;
+    width: 100%;
     height: 100%;
 }
 
@@ -7307,6 +7307,26 @@ z .slider-area .hero-cap h2 {
     font-size: 20px;
     font-weight: 700;
     color: red;
+}
+
+.saleLeft{
+    width: 15vw;
+}
+
+.saleLeft img{
+    width: 100%;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.saleUnder {
+    display: none;
+}
+
+.saleUnder img{
+    width: 100%; 
+    margin-top: 50px; 
+    border-radius: 10px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -7343,6 +7363,12 @@ z .slider-area .hero-cap h2 {
         width: 80vw;
         margin-bottom: 10px;
     }
+    .saleLeft{
+        display: none;
+    }
+    .saleUnder {
+        display: block;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -7370,7 +7396,13 @@ z .slider-area .hero-cap h2 {
         display: none;
     }
     .question_container{
-        margin: 0px auto;
+        /* margin: 0px auto; */
+    }
+    .saleLeft{
+        display: none;
+    }
+    .saleUnder {
+        display: block;
     }
 }
 
@@ -7407,6 +7439,12 @@ z .slider-area .hero-cap h2 {
     .goto_learning{
         width: 30vw;
     }
+    .saleLeft{
+        display: none;
+    }
+    .saleUnder {
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -7437,6 +7475,12 @@ z .slider-area .hero-cap h2 {
     .goto_learning{
         width: 40vw;
     }
+    .saleLeft{
+        display: block;
+    }
+    .saleUnder {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -7466,6 +7510,12 @@ z .slider-area .hero-cap h2 {
     }
     .goto_learning{
         width: 40vw;
+    }
+    .saleLeft{
+        display: block;
+    }
+    .saleUnder {
+        display: none;
     }
 }
 

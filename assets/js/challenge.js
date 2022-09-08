@@ -244,15 +244,15 @@ function startCountdownTimer(){
     let minute = document.getElementById("minute");
     let second = document.getElementById("second");
 
-    hour.innerText = Math.floor((timeLeft/1000)/3600);
-    minute.innerText = Math.floor(((timeLeft/1000)%3600)/60);
-    second.innerText = Math.floor((timeLeft/1000)%60);
+    hour.innerText = Math.floor((timeLeft/1000)/3600) >= 10 ? Math.floor((timeLeft/1000)/3600) : "0" + Math.floor((timeLeft/1000)/3600);
+    minute.innerText = Math.floor(((timeLeft/1000)%3600)/60) >= 10 ? Math.floor(((timeLeft/1000)%3600)/60) : "0" + Math.floor(((timeLeft/1000)%3600)/60);
+    second.innerText = Math.floor((timeLeft/1000)%60) >= 10 ? Math.floor((timeLeft/1000)%60) : "0" + Math.floor((timeLeft/1000)%60);
 
     timeLeft -= 1000;
     setInterval(() => {
-        hour.innerText = Math.floor((timeLeft/1000)/3600);
-        minute.innerText = Math.floor(((timeLeft/1000)%3600)/60);
-        second.innerText = Math.floor((timeLeft/1000)%60);
+        hour.innerText = Math.floor((timeLeft/1000)/3600) >= 10 ? Math.floor((timeLeft/1000)/3600) : "0" + Math.floor((timeLeft/1000)/3600);
+        minute.innerText = Math.floor(((timeLeft/1000)%3600)/60) >= 10 ? Math.floor(((timeLeft/1000)%3600)/60) : "0" + Math.floor(((timeLeft/1000)%3600)/60);
+        second.innerText = Math.floor((timeLeft/1000)%60) >= 10 ? Math.floor((timeLeft/1000)%60) : "0" + Math.floor((timeLeft/1000)%60);
         timeLeft -= timeStep;
         
         // timeout
