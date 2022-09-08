@@ -7290,6 +7290,25 @@ z .slider-area .hero-cap h2 {
     /* width: auto; */
 }
 
+.countdownTimer{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.timerWrp{
+    position: absolute;
+    left: 0;
+    width: 25%;
+    height: 100%;
+}
+
+.timer{
+    font-size: 20px;
+    font-weight: 700;
+    color: red;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .start_test_container{

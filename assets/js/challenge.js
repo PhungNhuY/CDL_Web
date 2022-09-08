@@ -1,4 +1,7 @@
 //-------------init---------------
+//set time for the test
+time = 600*1000;
+
 document.getElementById("btn_start_test").setAttribute('onclick', 'startTest()');
 
 number_of_question = document.getElementById("number_of_question");
@@ -21,7 +24,7 @@ answer_content_4 = document.getElementById("answer_content_4");
 explanation = document.getElementById("explanation");
 explanation_content = document.getElementById("explanation_content");
 
-numberOfQuestion = 0;
+numberOfQuestion = 20;
 currentQuestion = -1;
 var data = [];
 state = 1;
@@ -170,7 +173,6 @@ function choose(number, idQuestion){
     }
 }
 
-
 function showSummary(){
     document.getElementById("main_test_area").style.display = "none";
     document.getElementById("summary").style.display = "block";
@@ -211,6 +213,55 @@ function back(){
     }
 }
 
+/*
+* description: this function use to shuffle an array
+* use : shuffle(array);
+*/
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+}
+
+
+function startCountdownTimer(){
+    let timeStep = 1000;
+    let timeLeft = time;
+
+    let hour = document.getElementById("hour");
+    let minute = document.getElementById("minute");
+    let second = document.getElementById("second");
+
+    hour.innerText = Math.floor((timeLeft/1000)/3600);
+    minute.innerText = Math.floor(((timeLeft/1000)%3600)/60);
+    second.innerText = Math.floor((timeLeft/1000)%60);
+
+    timeLeft -= 1000;
+    setInterval(() => {
+        hour.innerText = Math.floor((timeLeft/1000)/3600);
+        minute.innerText = Math.floor(((timeLeft/1000)%3600)/60);
+        second.innerText = Math.floor((timeLeft/1000)%60);
+        timeLeft -= timeStep;
+        
+        // timeout
+        if(timeLeft == 0){
+            showSummary();
+        }
+    }, timeStep);
+}
+
 
 function startTest(){
     //hide start_test_container
@@ -218,33 +269,45 @@ function startTest(){
     document.getElementById("main_test_area").style.display = "flex";
     //get state
     state = document.getElementById("state").value;
-    numberOfQuestion = 0;
     data = [];
+    let temp = [];
     currentQuestion = 0;
     menuProgress = document.getElementById('atCell');
 
     // load xong -> gen ans
     loadJSON(function(json) {
-        let i = 0;
+
+        //load data from json file
         json.questions.forEach(element => {
             if(element.state == state){
-                data.push(element);
-                numberOfQuestion++;
-                //gen progress
-                i++;
-                let cell = document.createElement("div");
-                cell.innerText = i;
-                cell.setAttribute('class', 'thisCell');
-                cell.setAttribute('id', `cell_${i-1}`);
-                menuProgress.appendChild(cell);
+                temp.push(element);
             }
         });
-
+        
+        //take 20 random question
+        shuffle(temp);
+        let cellId = 0;
+        for(let i=0;i<numberOfQuestion;i++){
+            data.push(temp[i]);
+            //gen progress
+            cellId++;
+            let cell = document.createElement("div");
+            cell.innerText = cellId;
+            cell.setAttribute('class', 'thisCell');
+            cell.setAttribute('id', `cell_${cellId-1}`);
+            menuProgress.appendChild(cell);
+        }
+        
         //show length of test
-        document.getElementById("testLength").innerText = i;
+        document.getElementById("testLength").innerText = cellId;
 
-        //calculate the number of mistakes allowed
-        document.getElementById('numberOfMistakes').innerText = (i/5).toFixed();
+        // calculate the number of mistakes allowed
+        document.getElementById('numberOfMistakes').innerText = (cellId/5).toFixed();
+
         gen_ans(currentQuestion);
+        startCountdownTimer();
     });
 }
+
+// calculate the number of mistakes allowed
+// document.getElementById('numberOfMistakes').innerText = (i/5).toFixed();

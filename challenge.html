@@ -33,7 +33,7 @@
 <body>
     <header>
         <!-- Header Start -->
-        <div class="header-area header-transparrent ">
+        <div class="header-area header-transparrent">
             <div class="main-header header-sticky">
                 <div class="container">
                     <div class="row align-items-center">
@@ -71,9 +71,9 @@
 
     <div class="main_content">
         <div class="start_test_container" id="start_test_container">
-            <h2>General Knowledge Test</h2>
+            <h2>challenge ???</h2>
             <div class="introduction">
-                <p>The knowledge you have gained from studying the Commercial Driver License Manual on topics such as road signs, handling weather, special road conditions, railroad crossings, right-of-way rules, and driving techniques will be tested today to help you become a better driver and to prepare you for the real CDL written exam. Our 50 multiple-choice questions, which are written just like those you will find on the actual test and each contain a hint and explanation to help you understand the subject matter completely, are an ideal way to simulate taking the exam. Instead of making question flash cards, you can test yourself here again and again until you receive a perfect score. Good luck and drive safely!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, amet architecto quia, animi doloribus dolorum dolore eum iste unde doloremque et libero assumenda nostrum possimus reprehenderit neque quasi culpa. Officia????????</p>
             </div>
             <div class="select-and-text">
                 <p style="line-height: 50px;">Choose your state: </p>
@@ -98,11 +98,21 @@
                 </div> -->
             </div>
             <div class="question_container" id="question_container">
+                <div class="countdownTimer">
+                    <div class="timerWrp">
+                        <p class="timer display_inline"><i class="fa-solid fa-clock"></i></p>
+                        <p class="timer display_inline" id="hour">0</p>
+                        <p class="timer display_inline">:</p>
+                        <p class="timer display_inline" id="minute">0</p>
+                        <p class="timer display_inline">:</p>
+                        <p class="timer display_inline" id="second">0</p>
+                    </div>
+                </div>
                 <div class="question">
                     <p class="display_inline fontWeigth">Question </p>
                     <p class="display_inline fontWeigth" id="number_of_question"></p>
                     <p class="display_inline">/</p>
-                    <p class="display_inline" id="testLength">50</p>
+                    <p class="display_inline" id="testLength"></p>
                     <p id="question"></p>
                 </div>
                 <div class="question_image">
@@ -176,7 +186,7 @@
     </div>
 
     <!-- JS here -->
-    <script src="./assets/js/tests.js"></script>
+    <script src="./assets/js/challenge.js"></script>
 
     <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -212,6 +222,9 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/bddacbebe6.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
