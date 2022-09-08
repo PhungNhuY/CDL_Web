@@ -7329,6 +7329,10 @@ z .slider-area .hero-cap h2 {
     border-radius: 10px;
 }
 
+.image_hero_2{
+    width: 700px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .start_test_container{
@@ -7440,10 +7444,10 @@ z .slider-area .hero-cap h2 {
         width: 30vw;
     }
     .saleLeft{
-        display: none;
+        display: block;
     }
     .saleUnder {
-        display: block;
+        display: none;
     }
 }
 
