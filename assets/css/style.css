@@ -4,6 +4,10 @@
     --main-color: #22A551;
 }
 
+a:hover{
+    text-decoration: none !important;
+}
+
 .white-bg {
     background: #ffffff
 }
