@@ -7315,7 +7315,7 @@ z .slider-area .hero-cap h2 {
 
 .saleLeft img{
     width: 100%;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     border-radius: 10px;
 }
 
@@ -7431,7 +7431,7 @@ z .slider-area .hero-cap h2 {
         display: none;
     }
     .question_container{
-        /* margin: 0px auto; */
+        margin: 0px auto;
     }
     .saleLeft{
         display: none;
@@ -7479,6 +7479,15 @@ z .slider-area .hero-cap h2 {
     }
     .saleUnder {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .saleLeft{
+        display: none;
+    }
+    .saleUnder {
+        display: block;
     }
 }
 
