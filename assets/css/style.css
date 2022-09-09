@@ -7344,21 +7344,8 @@ z .slider-area .hero-cap h2 {
     padding-bottom: 50px;
 }
 
-.challenge_description{
-    text-align: justify;
-    width: 30vw;
-    margin-left: 50px;
-    color: rgb(213, 31, 31);
-}
-
-.challenge_description h3{
-    color: rgb(213, 31, 31);
-    font-weight: 700;
-}
-
 .challenge_title{
-    color: rgb(213, 31, 31);
-    font-weight: 700;
+    margin-bottom: 10px !important;
 }
 
 .challengetBtn{
