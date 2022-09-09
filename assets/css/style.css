@@ -7346,6 +7346,7 @@ z .slider-area .hero-cap h2 {
 
 .challenge_title{
     margin-bottom: 10px !important;
+    padding: 0 !important;
 }
 
 .challengetBtn{
@@ -7357,6 +7358,10 @@ z .slider-area .hero-cap h2 {
     border-radius: 5px;
     margin-right: 20px;
     cursor: pointer;
+}
+
+.textAlignJustify{
+    text-align: justify;
 }
 
 /* Extra small devices (phones, 600px and down) */
