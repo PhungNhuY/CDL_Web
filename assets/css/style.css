@@ -7284,6 +7284,7 @@ z .slider-area .hero-cap h2 {
 
 .btnWrp{
     display: flex;
+    /* justify-content: center; */
 }
 
 .img_blog{
@@ -7362,6 +7363,12 @@ z .slider-area .hero-cap h2 {
 
 .textAlignJustify{
     text-align: justify;
+}
+
+.challenge-app{
+    background-color: lightblue;
+    margin-top: 0px !important;
+    padding: 50px 0px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -7524,6 +7531,9 @@ z .slider-area .hero-cap h2 {
     }
     .saleUnder {
         display: none;
+    }
+    .testContent{
+        text-align: left;
     }
 }
 
