@@ -6349,102 +6349,102 @@ z .slider-area .hero-cap h2 {
 
 .available-app-area {
     position: relative;
-    padding-top: 220px;
-    padding-bottom: 220px
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .available-app-area {
-        padding-top: 150px;
-        padding-bottom: 150px
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .available-app-area {
-        padding-top: 100px;
-        padding-bottom: 100px
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .available-app-area {
-        padding-top: 100px;
-        padding-bottom: 100px
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
 
 @media (max-width: 767px) {
     .available-app-area {
-        padding-top: 100px;
-        padding-bottom: 100px
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 
 .available-app-area .app-caption .section-tittle3 h2 {
     color: #fff;
     margin-bottom: 35px;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .available-app-area .app-caption p {
     color: #fff;
     padding-right: 52px;
-    padding-bottom: 26px
+    padding-bottom: 26px;
 }
 
 .available-app-area .app-caption .app-btn .app-btn1 {
-    padding-right: 15px
+    padding-right: 15px;
 }
 
 @media (max-width: 767px) {
     .available-app-area .app-caption .app-btn .app-btn2 {
         display: block;
-        padding-top: 10px
+        padding-top: 10px;
     }
 }
 
 .available-app-area .app-img {
     position: relative;
-    right: -88px
+    right: -88px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1440px) {
     .available-app-area .app-img {
-        right: 0px
+        right: 0px;
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .available-app-area .app-img {
         top: 45px;
-        right: 0
+        right: 0;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .available-app-area .app-img {
         top: 45px;
-        right: 0
+        right: 0;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .available-app-area .app-img {
         top: 45px;
-        right: 0
+        right: 0;
     }
 }
 
 @media (max-width: 767px) {
     .available-app-area .app-img {
         top: 45px;
-        right: 0
+        right: 0;
     }
 }
 
 .available-app-area .app-img img {
-    width: 120%
+    width: 120%;
 }
 
 .available-app-area .app-shape .app-shape-top {
@@ -7336,6 +7336,40 @@ z .slider-area .hero-cap h2 {
 .saleLeftBlog{
     width: 25vw;
     border-radius: 10px;
+}
+
+.index_challenge{
+    background-color: #22a551;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.challenge_description{
+    text-align: justify;
+    width: 30vw;
+    margin-left: 50px;
+    color: rgb(213, 31, 31);
+}
+
+.challenge_description h3{
+    color: rgb(213, 31, 31);
+    font-weight: 700;
+}
+
+.challenge_title{
+    color: rgb(213, 31, 31);
+    font-weight: 700;
+}
+
+.startTestBtn{
+    color: white;
+    width: 250px;
+    border: 0px;
+    height: 50px;
+    background-color: rgb(213, 31, 31);
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
 }
 
 /* Extra small devices (phones, 600px and down) */
