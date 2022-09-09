@@ -5822,14 +5822,14 @@ z .slider-area .hero-cap h2 {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .applic-apps .single-cases-info {
-        left: 38%;
+        /* left: 38%; */
         margin-top: 0px
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .applic-apps .single-cases-info {
-        left: 17%;
+        /* left: 17%; */
         margin-top: 40px
     }
 }
@@ -7092,7 +7092,7 @@ z .slider-area .hero-cap h2 {
 }
 
 .image_hero_2{
-    width: 700px;
+    width: 100%;
 }
 
 .saleLeftBlog{
@@ -7130,6 +7130,14 @@ z .slider-area .hero-cap h2 {
     background-color: lightblue;
     margin-top: 0px !important;
     padding: 50px 0px;
+}
+
+.zIndex-1{
+    z-index: -1;
+}
+
+.imgBestFt{
+    display: block;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -7172,6 +7180,9 @@ z .slider-area .hero-cap h2 {
     .saleUnder {
         display: block;
     }
+    .imgBestFt{
+        display: none;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -7206,6 +7217,9 @@ z .slider-area .hero-cap h2 {
     }
     .saleUnder {
         display: block;
+    }
+    .imgBestFt{
+        display: none;
     }
 }
 
@@ -7248,6 +7262,9 @@ z .slider-area .hero-cap h2 {
     .saleUnder {
         display: none;
     }
+    .imgBestFt{
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -7256,6 +7273,9 @@ z .slider-area .hero-cap h2 {
     }
     .saleUnder {
         display: block;
+    }
+    .imgBestFt{
+        display: none;
     }
 }
 
@@ -7296,6 +7316,9 @@ z .slider-area .hero-cap h2 {
     .testContent{
         text-align: left;
     }
+    .imgBestFt{
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -7331,6 +7354,9 @@ z .slider-area .hero-cap h2 {
     }
     .saleUnder {
         display: none;
+    }
+    .imgBestFt{
+        display: block;
     }
 }
 
